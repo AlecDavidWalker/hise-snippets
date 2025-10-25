@@ -1,0 +1,114 @@
+// Author: Alec David Walker Mitchell
+// License: Public Domain 
+
+Content.makeFrontInterface(600, 600);
+
+// Create Local LAF
+const locl_laf = Content.createLocalLookAndFeel();
+
+const var Button1 = Content.getComponent("Button1");
+
+namespace Paths
+{
+
+const var svgLogo_path = Content.createPath();
+const var svgLogo_path_svg_data = [110,109,76,230,39,68,168,35,110,67,98,221,177,39,68,216,74,111,67,184,115,39,68,126,98,112,67,255,72,39,68,54,153,113,67,98,162,226,34,68,208,186,136,67,70,124,30,68,232,172,152,67,218,23,26,68,0,159,168,67,98,81,8,26,68,66,217,168,67,199,248,25,68,104,
+23,169,67,47,235,25,68,140,85,169,67,98,144,155,25,68,136,198,170,67,181,217,25,68,187,136,171,67,188,161,26,68,187,136,171,67,108,177,224,34,68,187,136,171,67,98,32,155,35,68,205,167,171,67,202,199,35,68,208,78,172,67,43,120,35,68,96,172,173,67,98,115,
+187,33,68,156,58,181,67,202,252,31,68,246,196,188,67,32,62,30,68,80,79,196,67,98,141,69,29,68,48,131,200,67,38,71,28,68,44,179,204,67,102,84,27,68,237,234,208,67,98,198,4,27,68,94,76,210,67,184,128,26,68,120,173,210,67,225,211,25,68,120,173,210,67,108,
+147,254,8,68,120,173,210,67,98,22,192,7,68,120,173,210,67,0,128,7,68,158,223,209,67,255,5,8,68,4,153,207,67,98,125,15,13,68,12,192,185,67,250,24,18,68,18,231,163,67,135,32,23,68,55,10,142,67,98,118,192,25,68,113,161,130,67,86,98,28,68,86,113,110,67,99,
+254,30,68,4,152,87,67,98,110,97,31,68,1,50,84,67,124,229,31,68,136,142,82,67,197,231,32,68,74,157,82,67,98,90,159,36,68,54,220,82,67,224,88,40,68,232,196,82,67,103,18,44,68,74,157,82,67,98,220,14,45,68,133,149,82,67,57,170,45,68,158,2,84,67,8,21,46,68,
+62,151,87,67,98,128,196,48,68,236,11,111,67,189,123,51,68,106,60,131,67,9,49,54,68,222,242,142,67,98,172,108,58,68,192,70,161,67,80,168,62,68,132,158,179,67,2,226,66,68,73,246,197,67,98,24,168,67,68,196,76,201,67,104,102,68,68,4,171,204,67,171,38,69,
+68,68,9,208,67,98,0,128,69,68,82,153,209,67,200,34,69,68,22,173,210,67,131,65,68,68,248,176,210,67,108,26,144,65,68,248,176,210,67,98,133,82,61,68,248,176,210,67,225,22,57,68,51,169,210,67,62,219,52,68,188,184,210,67,98,237,28,52,68,188,184,210,67,44,
+176,51,68,96,29,210,67,126,98,51,68,227,222,208,67,98,254,2,50,68,68,50,203,67,169,157,48,68,136,137,197,67,252,67,47,68,8,217,191,67,98,34,252,46,68,20,170,190,67,175,166,46,68,250,72,190,67,157,1,46,68,191,80,190,67,98,252,120,43,68,239,107,190,67,
+105,238,40,68,42,100,190,67,215,99,38,68,239,107,190,67,98,105,35,37,68,239,107,190,67,57,8,37,68,232,41,190,67,15,181,37,68,96,2,188,67,98,21,137,39,68,68,35,182,67,194,104,41,68,206,79,176,67,140,68,43,68,118,120,170,67,98,221,136,44,68,218,126,166,
+67,31,207,45,68,62,133,162,67,111,19,47,68,162,139,158,67,98,189,42,47,68,214,65,158,67,252,67,47,68,10,248,157,67,89,89,47,68,62,174,157,67,98,52,161,47,68,33,166,156,67,78,124,47,68,78,26,156,67,212,228,46,68,60,251,155,67,98,223,59,46,68,41,220,155,
+67,250,144,45,68,22,189,155,67,20,230,44,68,22,189,155,67,98,141,190,42,68,82,181,155,67,20,149,40,68,22,189,155,67,141,109,38,68,22,189,155,67,98,71,140,37,68,22,189,155,67,94,70,37,68,186,33,155,67,68,107,37,68,184,110,153,67,98,37,245,37,68,82,19,
+147,67,219,132,38,68,235,183,140,67,174,16,39,68,163,88,134,67,98,155,119,39,68,92,172,129,67,166,218,39,68,104,248,121,67,206,57,40,68,23,152,112,67,98,147,65,40,68,108,229,111,67,98,38,40,68,176,19,111,67,188,26,40,68,125,81,110,67,98,65,9,40,68,244,
+65,110,67,184,249,39,68,106,50,110,67,62,232,39,68,166,42,110,67,108,76,230,39,68,166,42,110,67,108,76,230,39,68,225,34,110,67,99,101,0,0];
+	svgLogo_path.loadFromData(svgLogo_path_svg_data);
+	
+}
+
+//  Toggle Button
+locl_laf.registerFunction("drawToggleButton", function(g, obj)
+{  
+	if (obj.text == "svgLogo")
+	{	    
+	
+ // Add buffer to the button rendering area
+    var buttonBuffer = 3; // Adjust this value to give the shadow more breathing room
+
+    // Calculate the extended shadow area
+    var shadowOffset = 1; // Offset for shadow around the button
+    var shadowArea = [
+        -shadowOffset, // Extend shadow to the left
+        -shadowOffset, // Extend shadow upward
+        obj.area[2] + 1 * shadowOffset, // Extend shadow to the right
+        1 * obj.area[2] + 1 * shadowOffset // Extend shadow downward
+    ];
+
+    if (obj.value) {
+        // Draw the shadow path first
+        g.setGradientFill([
+            0x50000000, shadowArea[0], shadowArea[1], // Semi-transparent black at shadow's origin
+            0x00000000, shadowArea[2], shadowArea[3], // Fully transparent black for fade-out
+            false // Linear gradient
+        ]);
+        g.fillPath(Paths.svgLogo_path, shadowArea);
+
+        // Draw the main button
+        if (obj.over) {
+            g.setColour(obj.itemColour1);
+        } else if (obj.down) {
+            g.setColour(obj.textColour);
+        } else {
+            g.setGradientFill([
+                obj.textColour, 10, 0.2 * obj.area[3],
+                obj.bgColour, 1.2 * obj.area[2], 0.6 * obj.area[3]
+            ]);
+        }
+
+        g.fillPath(Paths.svgLogo_path, [
+            buttonBuffer, buttonBuffer,
+            obj.area[2] - 2 * buttonBuffer, 1 * obj.area[2] - 2 * buttonBuffer
+        ]);
+
+        g.setFont("Oxygen Regular", 12);
+        g.drawAlignedText("THUNDER AUDIO", [
+            buttonBuffer, obj.area[3] - 25 - buttonBuffer,
+            obj.area[2] - 2 * buttonBuffer, 20
+        ], "centred");
+    } else if (!obj.value) {
+        // Draw the shadow path
+        g.setGradientFill([
+            0x00000000, shadowArea[0], shadowArea[1],
+            0x00000000, shadowArea[2], shadowArea[3],
+            false
+        ]);
+        g.fillPath(Paths.svgLogo_path, shadowArea);
+
+        // Draw the main button
+        if (obj.over) {
+            g.setColour(obj.itemColour1);
+        } else if (obj.down) {
+            g.setColour(obj.itemColour2);
+        } else {
+            g.setColour(obj.itemColour2);
+        }
+
+        g.fillPath(Paths.svgLogo_path, [
+            buttonBuffer, buttonBuffer,
+            obj.area[2] - 2 * buttonBuffer, 1 * obj.area[2] - 2 * buttonBuffer
+        ]);
+
+        g.setFont("Oxygen Regular", 12);
+        g.drawAlignedText("THUNDER AUDIO", [
+            buttonBuffer, obj.area[3] - 25 - buttonBuffer,
+            obj.area[2] - 2 * buttonBuffer, 20
+        ], "centred");
+    }
+}
+
+});
+
+Button1.setLocalLookAndFeel(locl_laf);
