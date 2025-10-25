@@ -44,7 +44,7 @@ locl_laf.registerFunction("drawToggleButton", function(g, obj)
         -shadowOffset, // Extend shadow to the left
         -shadowOffset, // Extend shadow upward
         obj.area[2] + 1 * shadowOffset, // Extend shadow to the right
-        1 * obj.area[2] + 1 * shadowOffset // Extend shadow downward
+        obj.area[2] + 1 * shadowOffset // Extend shadow downward
     ];
 
     if (obj.value) {
